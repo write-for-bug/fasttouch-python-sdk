@@ -1,10 +1,10 @@
 # Fasttouch Python SDK
 
-Fasttouch/StarTouch 机械臂的 Python SDK，通过 CAN 总线与机械臂通信，提供关节控制、末端位姿控制和夹爪操作功能。
+Fasttouch 机械臂的 Python SDK，通过 CAN 总线与机械臂通信，提供关节控制、末端位姿控制和夹爪操作功能。
 
 ## 硬件要求
 
-- Fasttouch/StarTouch 机械臂
+- Fasttouch 机械臂
 - CAN 接口适配器（如 USB-CAN）
 - Linux 系统（推荐 Ubuntu 22.04 / 20.04）
 
