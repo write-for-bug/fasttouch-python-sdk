@@ -5,15 +5,13 @@ build-backend = "scikit_build_core.build"
 
 
 [project]
-name = "startouch-python-sdk"
-version = "0.1.0"
-description = "Precompiled Startouch robot SDK"
+name = "fasttouch-python-sdk"
+version = "0.1.1"
+description = "Precompiled Fasttouch robot SDK"
 readme = "README.md"
 authors = [
-  {name = "zhanglijie", email = "zlj15058114997@gmail.com"}
 ]
 maintainers = [
-  {name = "zhanglijie", email = "zlj15058114997@gmail.com"}
 ]
 classifiers = [
     # TODO
@@ -39,13 +37,13 @@ changelog = "https://github.com/write-for-bug/startouch_python_sdk/blob/master/c
 homepage = "https://github.com/write-for-bug/startouch_python_sdk"
 
 [project.scripts]
-startouch_python_sdk = "startouch_python_sdk.cli:app"
+fasttouch_python_sdk = "startouch_python_sdk.cli:app"
 
 
 
 [tool.scikit-build]
 cmake.args = ["-DCMAKE_BUILD_TYPE=Release"]
-wheel.packages = ["startouch_python_sdk"]  # 打包 src/startouch_python_sdk/
+wheel.packages = ["fasttouch_python_sdk"]  # 打包 src/startouch_python_sdk/
 
 
 

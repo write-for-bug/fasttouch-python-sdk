@@ -1,16 +1,18 @@
 from typing import List, Tuple, Union, Optional, Dict, Any
 import numpy as np
 import os
-try:
-    from . import startouch_python_sdk as _ext
-except ImportError as e:
-    raise ImportError(
-        f"Failed to load Startouch C++ extension: {e}. "
-        "Please run: pip install startouch-python-sdk"
-    ) from e
+from . import fasttouch_python_sdk as _ext
+from .utils import quaternion_to_euler_wxyz,quaternion_to_euler_xyzw,euler_to_quaternion
+# try:
+#     from . import fasttouch_python_sdk as _ext
+# except ImportError as e:
+#     raise ImportError(
+#         f"Failed to load Startouch C++ extension: {e}. "
+#         "Please run: pip install startouch-python-sdk"
+#     ) from e
 
 
-class StartouchArm:
+class FasttouchArm:
     """
     Base class for a single robot arm.
 
@@ -232,6 +234,4 @@ class StartouchArm:
 
 
     def cleanup(self):
-        # 或者可以直接在析构函数中释放资源
-        print("销毁 SingleArm 对象")
         self.arm.cleanup()

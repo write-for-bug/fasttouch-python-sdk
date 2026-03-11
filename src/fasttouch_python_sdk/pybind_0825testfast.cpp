@@ -6,7 +6,7 @@
 #include "interfaces_0825fasttest.hpp" 
 
 namespace py = pybind11;
-PYBIND11_MODULE(startouch_python_sdk, m) {
+PYBIND11_MODULE(fasttouch_python_sdk, m) {
     py::class_<ArmController>(m, "ArmController")
         .def(py::init([](py::kwargs kwargs) {
         std::string permutation_matrix = kwargs.contains("permutation_matrix") ? kwargs["permutation_matrix"].cast<std::string>() : "/media/sdk/data/aproject/Xrobot/Nxyarm/openarm_can/param_csv/permutationMatrix.csv";
